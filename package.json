@@ -1,0 +1,16 @@
+{
+  "name": "node-red-contrib-fh-forms",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Paolo Haji <phaji@redhat.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fh-mbaas-api": "^6.1.8"
+  },
+  "node-red": {
+    "nodes": {
+      "forms-submission-complete": "forms-submission-complete/index.js"
+    }
+  }
+}
