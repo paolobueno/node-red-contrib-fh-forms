@@ -6,6 +6,7 @@ module.exports = function(RED) {
     var node = this;
     node.on('input', function(msg) {
       forms.getForms({}, function(err, data) {
+        msg = RED.util.cloneMessage(msg);
         if (err) {
           msg.error = err;
           return node.error('error listing forms', msg);
