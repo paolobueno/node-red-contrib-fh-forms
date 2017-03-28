@@ -8,10 +8,9 @@ module.exports = function(RED) {
       forms.getForms({}, function(err, data) {
         msg = RED.util.cloneMessage(msg);
         if (err) {
-          msg.error = err;
-          return node.error('error listing forms', msg);
+          return node.error(err, msg);
         }
-        msg.payload = Object.assign({}, msg.payload, data);
+        msg.payload = Object.assign({}, msg.payload, data.forms);
         node.send(msg);
       });
     });
