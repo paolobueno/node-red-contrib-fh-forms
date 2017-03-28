@@ -10,7 +10,7 @@ module.exports = function(RED) {
         if (err) {
           return node.error(err, msg);
         }
-        msg.payload = Object.assign({}, msg.payload, data.forms);
+        msg.payload = Object.assign({}, msg.payload, data);
         node.send(msg);
       });
     });
