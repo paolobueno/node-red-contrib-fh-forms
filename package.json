@@ -10,7 +10,8 @@
   },
   "node-red": {
     "nodes": {
-      "forms-submission-complete": "forms-submission-complete/index.js"
+      "fh-forms-submission-in": "submission-in/index.js",
+      "fh-forms-list": "list-forms/index.js"
     }
   }
 }
