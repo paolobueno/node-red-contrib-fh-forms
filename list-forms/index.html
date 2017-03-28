@@ -1,0 +1,26 @@
+<script type="text/javascript">
+    RED.nodes.registerType('fh-forms-list',{
+        category: 'function',
+        color: '#FFAAAA',
+        defaults: {
+            name: { value: "" }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "file.png",
+        label: function() {
+            return this.name || "Submission Complete";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="fh-forms-list">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="fh-forms-list">
+    <p>A node that emits events when a form submission is filled</p>
+</script>
