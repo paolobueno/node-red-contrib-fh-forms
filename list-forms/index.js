@@ -6,6 +6,10 @@ module.exports = function(RED) {
     var node = this;
     node.on('input', function(msg) {
       forms.getForms({}, function(err, data) {
+        if (err) {
+          msg.error = err;
+          return node.error('error listing forms', msg);
+        }
         msg.payload = Object.assign(msg.payload, data);
         node.send(msg);
       });
