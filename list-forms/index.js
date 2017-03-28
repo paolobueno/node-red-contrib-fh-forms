@@ -10,7 +10,7 @@ module.exports = function(RED) {
           msg.error = err;
           return node.error('error listing forms', msg);
         }
-        msg.payload = Object.assign(msg.payload, data);
+        msg.payload = Object.assign({}, msg.payload, data);
         node.send(msg);
       });
     });
